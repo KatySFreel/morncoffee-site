@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ebebeb">
+  <meta name="description" content="MORNCOFFEE — daytime raves, top DJs, specialty coffee and zero proof drinks.">
+  <title>MORNCOFFEE — Daytime raves & specialty coffee</title>
+  <link rel="preload" href="assets/oswald-bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="events.css">
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="popups.css">
+</head>
+<body id="top">
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <header class="header">
+        <a class="brand" href="./" aria-label="MORNCOFFEE home">
+          <svg aria-hidden="true" viewBox="0 0 16 22"><path fill="currentColor" d="M5 21c-1-1 0-4 0-5L1 10C-1 7 0 5 2 7l2 2-1-6C2 0 5 0 6 3l1 5V3c0-4 3-4 3-1l-1 6 3-7c1-2 3-1 2 2l-3 6 3-4c2-2 3 0 1 2l-4 7-2 2 1 4c1 3-4 3-5 1Z"/><path fill="#ebebeb" d="M4 10c-2-1 0 3 2 3 1 0-1-3-2-3m6 0c2-1 0 3-2 3-1 0 1-3 2-3"/></svg>
+          <span>MORNCOFFEE</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#events">Events</a>
+          <a href="#menu">Menu</a>
+          <a href="#merch">Merch</a>
+          <a href="#contacts">Contacts</a>
+        </nav>
+      </header>
+      <div class="copy">
+        <h1 id="hero-title">
+          <span class="intro">Daytime raves with</span>
+          <span class="label djs">top DJs</span>
+          <span class="label specialty">specialty coffee</span>
+          <span class="label zero">zero proof drinks</span>
+        </h1>
+        <img class="flower" src="assets/flower.webp" alt="" width="196" height="143">
+        <p class="description">MORNCOFFEE is a place where electronic music, specialty coffee, and conscious choices create a new reality</p>
+      </div>
+      <div class="collage" role="img" aria-label="An open-air daytime rave with an illustrated DJ, sunshine and colorful stickers">
+        <img class="rave" src="assets/rave.webp" alt="" width="590" height="600" fetchpriority="high">
+        <div class="hand"></div>
+        <img class="coffee" src="assets/coffee.webp" alt="" width="379" height="344">
+      </div>
+      <img class="sticker" src="assets/sticker.webp" alt="" width="170" height="110">
+    </section>
+    <section class="events" id="events" aria-labelledby="events-title">
+      <h2 id="events-title">Upcoming events</h2>
+      <img class="event-character" src="assets/event-character.webp" alt="" loading="lazy">
+      <div class="event-cards">
+        <article class="event-card event-sunday" aria-labelledby="title-sunday">
+          <img class="event-photo" src="assets/event-sunday.webp" alt="Sunday Session: Local Vibes" width="300" height="209" loading="lazy">
+          <div class="ticket">
+            <h3 id="title-sunday">Sunday Session: Local Vibes</h3>
+            <dl class="event-details">
+              <div><dt>Day</dt><dd>November 12 <span class="day-badge">Sunday</span></dd></div>
+              <div><dt>Time</dt><dd>2:00 PM – 8:00 PM</dd></div>
+              <div><dt>Place</dt><dd>MORNCOFFEE Space</dd></div>
+              <div><dt>DJ</dt><dd>SARAH KLEIN (London)</dd></div>
+              <div><dt>Price</dt><dd>Free</dd></div>
+              <div><dt>Registration</dt><dd>Open registration</dd></div>
+            </dl>
+            <div class="barcode" aria-hidden="true"></div>
+            <button class="register" type="button" data-event="sunday" aria-label="Register for Sunday Session: Local Vibes">Register</button>
+          </div>
+        </article>
+        <article class="event-card event-shoreditch" aria-labelledby="title-shoreditch">
+          <img class="event-photo" src="assets/event-shoreditch.webp" alt="Shoreditch Sessions" width="300" height="209" loading="lazy">
+          <div class="ticket">
+            <h3 id="title-shoreditch">Shoreditch Sessions</h3>
+            <dl class="event-details">
+              <div><dt>Day</dt><dd>November 19 <span class="day-badge">Saturday</span></dd></div>
+              <div><dt>Time</dt><dd>3:00 PM – 10:00 PM</dd></div>
+              <div><dt>Place</dt><dd>Boxpark Shoreditch (outdoor)</dd></div>
+              <div><dt>DJ</dt><dd>ALEX METRIC + LIAM K</dd></div>
+              <div><dt>Price</dt><dd>Early Bird: £12 // Regular: £18</dd></div>
+              <div><dt>Registration</dt><dd>Open registration</dd></div>
+            </dl>
+            <div class="barcode" aria-hidden="true"></div>
+            <button class="register" type="button" data-event="shoreditch" aria-label="Register for Shoreditch Sessions">Register</button>
+          </div>
+        </article>
+        <article class="event-card event-solomun" aria-labelledby="title-solomun">
+          <img class="event-photo" src="assets/event-solomun.webp" alt="MORNCOFFEE Presents: Solomun" width="300" height="209" loading="lazy">
+          <div class="ticket">
+            <h3 id="title-solomun">MORNCOFFEE Presents: Solomun</h3>
+            <dl class="event-details">
+              <div><dt>Day</dt><dd>November 26 <span class="day-badge">Saturday</span></dd></div>
+              <div><dt>Time</dt><dd>4:00 PM – 10:00 PM</dd></div>
+              <div><dt>Place</dt><dd>MORNCOFFEE Space</dd></div>
+              <div><dt>DJ</dt><dd>SOLOMUN (Hamburg)</dd></div>
+              <div><dt>Price</dt><dd>Regular: £35 // VIP: £60</dd></div>
+              <div><dt>Registration</dt><dd>Open registration</dd></div>
+            </dl>
+            <div class="barcode" aria-hidden="true"></div>
+            <button class="register" type="button" data-event="solomun" aria-label="Register for MORNCOFFEE Presents: Solomun">Register</button>
+          </div>
+        </article>
+      </div>
+      <span class="event-sticker morning" aria-hidden="true"><svg viewBox="0 0 42 23"><path d="M3 5h26v8c0 10-26 10-26 0Zm26 1h5c8 0 8 11-5 11M1 22h33" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Morning<br>Power</span></span>
+      <span class="event-sticker proof" aria-hidden="true">Zero proof<br>drinks</span>
+      <span class="event-sticker together" aria-hidden="true">Better<br>Together</span>
+      <span class="event-sticker energy" aria-hidden="true">Pure<br>Energy</span>
+      <div class="event-turntable" aria-hidden="true"></div>
+    </section>
+<section class="vibe canvas-section" id="vibe" aria-labelledby="vibe-title"><img class="art-layer vibe-top photo" src="assets/vibe-left.webp" alt="" loading="lazy" style="--x:12.33333cqw;--y:27.00000cqw;--w:21.41667cqw;--h:27.00000cqw;--r:180deg"><img class="art-layer vibe-top photo" src="assets/vibe-coffee.webp" alt="" loading="lazy" style="--x:12.33333cqw;--y:0.00000cqw;--w:14.75000cqw;--h:16.16667cqw;--r:0deg"><img class="art-layer vibe-top photo" src="assets/vibe-dj.webp" alt="" loading="lazy" style="--x:27.08333cqw;--y:0.00000cqw;--w:23.75000cqw;--h:27.00000cqw;--r:0deg"><img class="art-layer vibe-top photo" src="assets/vibe-crowd.webp" alt="" loading="lazy" style="--x:50.75000cqw;--y:0.00000cqw;--w:23.83333cqw;--h:16.16667cqw;--r:0deg"><img class="art-layer vibe-top photo" src="assets/vibe-party.webp" alt="" loading="lazy" style="--x:74.58333cqw;--y:0.00000cqw;--w:29.00000cqw;--h:27.00000cqw;--r:0deg"><img class="art-layer ornament" src="assets/character-dance.webp" alt="" loading="lazy" style="--x:-1.75000cqw;--y:8.25000cqw;--w:8.33333cqw;--h:11.00000cqw;--r:0deg"><h2 id="vibe-title">Feel the vibe</h2><p class="vibe-caption">Better to see it once</p><img class="art-layer vibe-bottom photo" src="assets/vibe-bottom-left.webp" alt="" loading="lazy" style="--x:-4.16667cqw;--y:51.75000cqw;--w:47.50000cqw;--h:27.00000cqw;--r:-3.41deg"><img class="art-layer vibe-bottom photo" src="assets/vibe-bottom-middle.webp" alt="" loading="lazy" style="--x:45.68750cqw;--y:61.01083cqw;--w:14.75000cqw;--h:19.16667cqw;--r:10.84deg"><img class="art-layer vibe-bottom photo" src="assets/vibe-bottom-right.webp" alt="" loading="lazy" style="--x:63.50000cqw;--y:51.88000cqw;--w:23.66667cqw;--h:27.00000cqw;--r:-8.8deg"><img class="art-layer vibe-bottom photo" src="assets/vibe-edge.webp" alt="" loading="lazy" style="--x:90.97417cqw;--y:57.01083cqw;--w:23.75000cqw;--h:22.50000cqw;--r:15.4deg"><img class="art-layer ornament" src="assets/character-vibe.webp" alt="" loading="lazy" style="--x:26.50000cqw;--y:56.33333cqw;--w:14.13333cqw;--h:18.75000cqw;--r:0deg"><img class="art-layer ornament" src="assets/character-cup.webp" alt="" loading="lazy" style="--x:70.58333cqw;--y:58.17917cqw;--w:9.00417cqw;--h:11.95333cqw;--r:-14.01deg"><span class="decal art-layer round" aria-hidden="true" style="--x:68.33333cqw;--y:14.08333cqw;--w:8.00000cqw;--h:8.00000cqw;--r:0deg">Light vibe</span><span class="decal art-layer orange" aria-hidden="true" style="--x:21.91667cqw;--y:13.41667cqw;--w:12.00000cqw;--h:7.41667cqw;--r:19deg">Pure<br>energy</span><span class="decal art-layer " aria-hidden="true" style="--x:5.33333cqw;--y:24.83333cqw;--w:10.25000cqw;--h:5.08333cqw;--r:-12deg">Good vibes</span><span class="decal art-layer " aria-hidden="true" style="--x:55.50000cqw;--y:67.08333cqw;--w:14.16667cqw;--h:8.91667cqw;--r:13deg">Better<br>together</span></section>
+<section class="menu-section canvas-section" id="menu" aria-labelledby="menu-title">
+<h2 class="section-title" id="menu-title">Menu</h2>
+<p class="menu-intro">From espresso to smoothie bowls — everything for your energy.</p>
+<div class="menu-tabs" role="tablist" aria-label="Menu categories">
+<button id="tab-coffee" role="tab" aria-selected="true" aria-controls="menu-coffee" data-category="coffee">Coffee</button>
+<button id="tab-drinks" role="tab" aria-selected="false" aria-controls="menu-drinks" tabindex="-1" data-category="drinks">Drinks</button>
+<button id="tab-food" role="tab" aria-selected="false" aria-controls="menu-food" tabindex="-1" data-category="food">Food</button>
+</div><div class="menu-grid" id="menu-coffee" role="tabpanel" aria-labelledby="tab-coffee"><article class="menu-card"><div class="menu-photo espresso" role="img" aria-label="Espresso" style="background-image:url(assets/espresso.webp)"></div><h3>Espresso</h3><p>Classic. Pure taste of the bean.</p><span class="price">£2.80</span></article><article class="menu-card"><div class="menu-photo flat-white" role="img" aria-label="Flat White" style="background-image:url(assets/flat-white.webp)"></div><h3>Flat White</h3><p>Velvety microfoam on double espresso.</p><span class="price">£3.50</span></article><article class="menu-card"><div class="menu-photo cappuccino" role="img" aria-label="Cappuccino" style="background-image:url(assets/cappuccino.webp)"></div><h3>Cappuccino</h3><p>Balance of coffee and milk.</p><span class="price">£3.80</span></article><article class="menu-card"><div class="menu-photo filter" role="img" aria-label="Filter Coffee" style="background-image:url(assets/filter.webp)"></div><h3>Filter Coffee</h3><p>Brew of the day (V60 / Chemex / Aeropress)</p><span class="price">£3.20</span></article></div><div class="menu-empty" id="menu-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden><h3>Zero proof drinks</h3><p>Drinks menu coming soon.</p></div><div class="menu-empty" id="menu-food" role="tabpanel" aria-labelledby="tab-food" hidden><h3>Food</h3><p>Food menu coming soon.</p></div>
+<p class="menu-note">We work with local suppliers and independent producers. Something new every week — stay updated on Instagram <span aria-hidden="true">↗</span></p><img class="art-layer menu-illustration ornament" src="assets/character-menu.webp" alt="" loading="lazy" style="--x:-1.50000cqw;--y:50.08333cqw;--w:26.33333cqw;--h:15.91667cqw;--r:0deg"><span class="decal art-layer " aria-hidden="true" style="--x:85.50000cqw;--y:12.83333cqw;--w:8.41667cqw;--h:4.16667cqw;--r:-14deg">Honest taste</span><span class="decal art-layer orange" aria-hidden="true" style="--x:41.08333cqw;--y:46.83333cqw;--w:10.50000cqw;--h:6.41667cqw;--r:6deg">Zero noise</span></section>
+<section class="about canvas-section" id="about" aria-labelledby="about-title">
+<h2 id="about-title"><span>More than a coffee shop</span><span>More than</span><span>a club</span></h2>
+<p class="about-intro">We created a new space — between the morning ritual with a cup of coffee and the nighttime dance floor.</p>
+<div class="mascot"><svg viewBox="0 0 206 283" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M164 0C157 0 146 19 138 44C134 58 126 61 126 44L129 20C130 3 114 2 108 15C96 36 95 55 95 103C90 111 87 99 82 84L79 59C74 35 61 13 48 14C34 15 35 35 39 62C42 77 50 91 53 100C59 119 44 109 30 95C17 80 2 81 0 98C-1 113 22 149 40 170L60 200C65 209 58 235 55 261C52 282 81 285 109 282C134 282 137 275 130 252L119 207C113 195 132 181 142 163L180 104C194 85 209 66 205 56C202 46 190 52 180 59L151 84C145 87 151 75 159 58L175 22C184 2 176 0 164 0ZM129 120C113 129 104 147 105 161C105 172 120 169 131 155C140 143 148 123 140 120C136 117 133 118 129 120ZM45 123C37 124 43 144 55 157C73 177 87 171 79 150C73 137 58 120 45 123ZM126 134C118 139 114 149 119 152C124 154 138 134 130 133ZM55 139C52 142 66 159 70 152C72 147 60 133 55 139Z"/></svg></div>
+<p class="about-proof">Yes. And we prove it</p><img class="art-layer about-image day-image photo" src="assets/about-day.webp" alt="" loading="lazy" style="--x:3.16667cqw;--y:36.97417cqw;--w:14.75000cqw;--h:14.26500cqw;--r:-6.06deg"><img class="art-layer ornament" src="assets/character-cup.webp" alt="" loading="lazy" style="--x:14.33333cqw;--y:35.50000cqw;--w:12.11333cqw;--h:16.08167cqw;--r:0deg"><img class="art-layer about-image dj-image photo" src="assets/vibe-coffee.webp" alt="" loading="lazy" style="--x:82.13500cqw;--y:47.00000cqw;--w:14.75000cqw;--h:15.84000cqw;--r:6.53deg"><img class="art-layer ornament" src="assets/character-music.webp" alt="" loading="lazy" style="--x:68.50000cqw;--y:46.08333cqw;--w:13.66667cqw;--h:18.16667cqw;--r:0deg"><img class="art-layer about-image drink-image photo" src="assets/about-drink.webp" alt="" loading="lazy" style="--x:3.16667cqw;--y:77.16833cqw;--w:14.75000cqw;--h:14.26500cqw;--r:-6.82deg"><img class="art-layer ornament" src="assets/character-drink.webp" alt="" loading="lazy" style="--x:14.50000cqw;--y:73.41667cqw;--w:13.50000cqw;--h:14.25000cqw;--r:0deg"><img class="art-layer about-image coffee-image photo" src="assets/about-coffee.webp" alt="" loading="lazy" style="--x:82.22167cqw;--y:77.25000cqw;--w:14.75000cqw;--h:11.95167cqw;--r:7.07deg"><img class="art-layer ornament" src="assets/character-coffee.webp" alt="" loading="lazy" style="--x:72.33333cqw;--y:71.33333cqw;--w:14.50000cqw;--h:19.16667cqw;--r:0deg"><article class="about-card about-day"><h3>Daytime</h3><p>From 2:00 PM to 10:00 PM, so your tomorrow is productive.</p></article><article class="about-card about-djs"><h3>Top DJs</h3><p>Techno, house, and everything that makes you move.</p></article><article class="about-card about-drink"><h3>Alcohol-free zone</h3><p>Pure energy without consequences.</p></article><article class="about-card about-coffee"><h3>Specialty coffee</h3><p>Freshly roasted arabica and alternative brewing methods.</p></article><span class="decal art-layer " aria-hidden="true" style="--x:40.50000cqw;--y:18.83333cqw;--w:15.41667cqw;--h:7.66667cqw;--r:-6deg">Specialty coffee</span><span class="decal art-layer " aria-hidden="true" style="--x:76.58333cqw;--y:56.33333cqw;--w:9.75000cqw;--h:4.75000cqw;--r:-6deg">In rhythm</span><span class="decal art-layer " aria-hidden="true" style="--x:14.66667cqw;--y:47.83333cqw;--w:8.50000cqw;--h:4.25000cqw;--r:-17deg">Closer to light</span><span class="decal art-layer orange" aria-hidden="true" style="--x:15.91667cqw;--y:84.25000cqw;--w:8.58333cqw;--h:5.25000cqw;--r:6deg">Zero noise</span><span class="decal art-layer round" aria-hidden="true" style="--x:78.75000cqw;--y:81.83333cqw;--w:9.08333cqw;--h:9.08333cqw;--r:13deg">Style & taste</span></section>
+<section class="merch canvas-section" id="merch" aria-labelledby="merch-title">
+<div class="merch-cover"></div><h2 class="section-title" id="merch-title">Merch</h2>
+<p class="merch-intro">Limited edition items created in the spirit of our rave mornings — bright, comfortable, and with a recognizable character. Each piece keeps the same energetic vibe you feel in our coffee &amp; music space.</p>
+<div class="merch-grid"><article class="product cap-white"><button class="product-view" data-product="cap-white" aria-label="View MORNCOFFEE Cap"><span class="product-photo" style="background-image:url(assets/cap-white.webp)"></span><h3>MORNCOFFEE Cap</h3></button><div class="product-meta"><span>£22</span><span class="swatches" aria-label="Available colors"><span class="swatch cream" title="Cream"></span><span class="swatch blue" title="Blue"></span></span></div></article><article class="product tote"><button class="product-view" data-product="tote" aria-label="View MORNCOFFEE Tote Bag"><span class="product-photo" style="background-image:url(assets/tote.webp)"></span><h3>MORNCOFFEE Tote Bag</h3></button><div class="product-meta"><span>£18</span></div></article><article class="product cap-blue"><button class="product-view" data-product="cap-blue" aria-label="View MORNCOFFEE Cap"><span class="product-photo" style="background-image:url(assets/cap-blue.webp)"></span><h3>MORNCOFFEE Cap</h3></button><div class="product-meta"><span>£28</span><span class="swatches" aria-label="Available colors"><span class="swatch cream" title="Cream"></span><span class="swatch blue" title="Blue"></span></span></div></article><article class="product tee"><button class="product-view" data-product="tee" aria-label="View MORNCOFFEE Essential Tee"><span class="product-photo" style="background-image:url(assets/tee.webp)"></span><h3>MORNCOFFEE Essential Tee</h3></button><div class="product-meta"><span>£2.80</span></div></article></div><img class="art-layer ornament merch-figure-left" src="assets/character-merch-left.webp" alt="" loading="lazy" style="--x:0.33333cqw;--y:74.16667cqw;--w:26.16667cqw;--h:34.66667cqw;--r:0deg"><img class="art-layer ornament merch-figure-right" src="assets/character-merch.webp" alt="" loading="lazy" style="--x:55.25000cqw;--y:79.16667cqw;--w:24.08333cqw;--h:32.00000cqw;--r:0deg"><span class="decal art-layer orange" aria-hidden="true" style="--x:25.75000cqw;--y:61.00000cqw;--w:8.66667cqw;--h:5.33333cqw;--r:-11deg">Pure energy</span><span class="decal art-layer " aria-hidden="true" style="--x:71.83333cqw;--y:45.33333cqw;--w:9.75000cqw;--h:4.75000cqw;--r:-6deg">In rhythm</span><span class="decal art-layer " aria-hidden="true" style="--x:86.25000cqw;--y:90.66667cqw;--w:12.08333cqw;--h:6.00000cqw;--r:-6deg">Specialty coffee</span></section>
+<section class="community canvas-section" id="community" aria-labelledby="community-title">
+<h2 class="section-title" id="community-title">Become part of the community</h2>
+<p class="community-copy"><span>Be part of the MORNCOFFEE community — get the latest news on events, merch, and collaborations first.</span> <span>We gather people who choose mindfulness, music, and movement.</span> <span class="mobile-community-line">All the most interesting updates are in our newsletter and social media.</span></p>
+<div class="signup"><p>Subscribe to be the first to know about events, drops, and new guests.</p><form id="newsletter"><label class="sr-only" for="email">Email</label><input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required><button type="submit">Join</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><img class="art-layer community-photo photo" src="assets/community-one.webp" alt="" loading="lazy" style="--x:-2.66667cqw;--y:1.27417cqw;--w:31.75000cqw;--h:27.00000cqw;--r:-6.83deg"><img class="art-layer community-photo photo" src="assets/community-two.webp" alt="" loading="lazy" style="--x:9.98583cqw;--y:15.25000cqw;--w:29.00000cqw;--h:27.00000cqw;--r:7.06deg"><span class="decal art-layer " aria-hidden="true" style="--x:27.91667cqw;--y:15.24667cqw;--w:8.66667cqw;--h:5.41667cqw;--r:-12deg">Better together</span></section>
+<footer class="footer canvas-section" id="contacts">
+<div class="footer-contact"><h2>Contacts</h2><address>42 Brick Lane, London E1 6RF<br><a href="mailto:hello@morncoffee.co.uk">hello@morncoffee.co.uk</a><br><a href="tel:+442012345678">+44 20 1234 5678</a></address></div>
+<div class="footer-hours"><h2>Opening hours</h2><p>Mon–Fri: 08:00 AM – 08:00 PM<br>Sat–Sun: 10:00 AM – 10:00 PM</p><h2>Events</h2><p>Every weekend 2:00 PM – 10:00 PM<br><a href="#events">(Check the schedule in the Events section)</a></p></div>
+<nav class="footer-nav" aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#events">Events</a><a href="#merch">Merch</a><a href="#contacts">Contacts</a></nav>
+<div class="social-block"><span class="social-label">Social media</span><div class="social-buttons"><button data-social="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7"/></svg></button><button data-social="Telegram" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 18-7-4 18-6-6-4 3 1-6Zm5 2 9-6-6 9"/></svg></button></div></div>
+<a class="footer-wordmark" href="#top" aria-label="MORNCOFFEE — back to top">MORNCOFFEE</a><img class="art-layer footer-character ornament" src="assets/character-music.webp" alt="" loading="lazy" style="--x:5.16667cqw;--y:42.16667cqw;--w:7.50000cqw;--h:10.00000cqw;--r:0deg"><img class="art-layer footer-character ornament" src="assets/character-menu.webp" alt="" loading="lazy" style="--x:39.66667cqw;--y:45.66667cqw;--w:8.28583cqw;--h:5.00000cqw;--r:0deg"><img class="art-layer footer-character ornament" src="assets/character-dance.webp" alt="" loading="lazy" style="--x:65.75000cqw;--y:27.41667cqw;--w:20.16667cqw;--h:26.75000cqw;--r:0deg"><img class="art-layer footer-character ornament" src="assets/footer-person.webp" alt="" loading="lazy" style="--x:85.41667cqw;--y:41.66667cqw;--w:5.50000cqw;--h:9.00000cqw;--r:0deg"><div class="footer-legal"><span>© 2025 MORNCOFFEE. All rights reserved</span><span><button data-legal="Privacy Policy">Privacy Policy</button> | <button data-legal="Terms &amp; Conditions">Terms &amp; Conditions</button></span></div></footer>
+  </main>
+  <dialog aria-labelledby="panel-title">
+    <button class="close" aria-label="Close" type="button">×</button>
+    <h2 id="panel-title"></h2>
+    <div id="panel-content"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
