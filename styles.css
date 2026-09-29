@@ -1,5 +1,5 @@
-@font-face{font-family:Oswald;src:url('assets/oswald-bold.ttf') format('truetype');font-weight:700;font-display:swap}
-@font-face{font-family:'Inter Tight';src:url('assets/inter-tight-medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Oswald;src:url('assets/oswald-bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Inter Tight';src:url('assets/inter-tight-medium.woff2') format('woff2');font-weight:500;font-display:swap}
 :root{color-scheme:light;--paper:#ebebeb;--ink:#331308;--orange:#ff6f3f;--yellow:#ffdf42;--blue:#4248ff}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter Tight',sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
 .hero{position:relative;width:100%;container-type:inline-size;min-height:50vw;background:var(--paper);isolation:isolate}

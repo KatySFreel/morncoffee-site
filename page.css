@@ -1,5 +1,5 @@
 /* Shared layout units retain the 1200px artboard proportions. */
-@font-face{font-family:Oswald;src:url('assets/oswald-regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Oswald;src:url('assets/oswald-regular.woff2') format('woff2');font-weight:400;font-display:swap}
 .canvas-section{position:relative;container-type:inline-size;isolation:isolate;max-width:1600px;margin-inline:auto}
 .art-layer{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);transform:rotate(var(--r,0deg));transform-origin:0 0;object-fit:cover}
 .ornament,.decal{pointer-events:none}.decal{display:flex;align-items:center;justify-content:center;text-align:center;text-transform:uppercase;font:bold 1.15cqw/1.05 'Inter Tight',sans-serif;background:var(--yellow);color:var(--blue);border-radius:50%;outline:1px solid currentColor;outline-offset:-.5cqw;z-index:3;padding:.5cqw}.decal.orange{color:var(--yellow);background:var(--orange)}.decal.round{border-radius:50%}
