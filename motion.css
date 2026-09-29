@@ -1,0 +1,58 @@
+/* One motion language: restrained entrances and movement tied to native scrolling. */
+:root{--motion-ease:cubic-bezier(.22,.61,.36,1);--hover-ease:cubic-bezier(.25,.1,.25,1)}
+.hero-parallax-layer{position:absolute;inset:0}
+.drawn-line path{stroke-dasharray:1;stroke-dashoffset:0}
+.motion-ready .drawn-line:not(.line-started) path{stroke-dashoffset:1}
+.motion-ready .motion-pending{opacity:0}
+.motion-ready .motion-pending:focus-within{opacity:1}
+.vibe-track{animation:none!important;transform:none}
+button:active,.product-view:active{scale:none}
+.record-popup>.close:hover{scale:none}
+.product-view .product-photo{transition:filter .35s var(--hover-ease)}
+.product-view:hover .product-photo{scale:none}
+.product,.product-view,.product-photo,.product-meta{cursor:pointer}
+.merch>.art-layer,.merch>.decal{pointer-events:none}
+.record-product-image{transition:transform .35s var(--motion-ease)}
+button,a,input{transition:color .3s var(--hover-ease),background-color .3s var(--hover-ease)}
+.record-options button,.product-photo-choice{transition:background-color .3s var(--hover-ease),border-color .3s var(--hover-ease),color .3s var(--hover-ease),filter .3s var(--hover-ease)}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .product{rotate:0deg;transition:rotate .65s var(--hover-ease)}
+ .product:nth-child(odd){--hover-tilt:1deg}
+ .product:nth-child(even){--hover-tilt:-1deg}
+ .product:hover,.product:focus-within{rotate:var(--hover-tilt,1deg)}
+}
+@media(prefers-reduced-motion:no-preference){
+ .hero-notes{animation:notes-float 4.8s ease-in-out infinite;transform-origin:50% 60%}
+ .hero[data-motion-paused] .hero-notes,body:has(dialog[open]) .hero-notes{animation-play-state:paused}
+ @keyframes notes-float{0%,100%{translate:0 0;rotate:-.35deg}50%{translate:0 -5px;rotate:.35deg}}
+ .hero h1>span{animation:hero-title-arrive .7s var(--motion-ease) both}
+ .hero h1>.djs{animation-delay:.1s}
+ .hero h1>.specialty{animation-delay:.2s}
+ .hero h1>.zero{animation-delay:.3s}
+ @keyframes hero-title-arrive{from{opacity:0;translate:0 18px;clip-path:inset(0 0 100% 0)}to{opacity:1;translate:0 0;clip-path:inset(0 0 0% 0)}}
+ .motion-ready .hero .copy{translate:0 var(--hero-copy-y,0px)}
+ .motion-ready .hero-parallax-layer{translate:0 var(--hero-photo-y,0px);scale:var(--hero-photo-scale,1);transform-origin:50% 100%}
+ .motion-ready .hero{z-index:3}
+ .motion-ready .events{z-index:2}
+ .motion-ready .community-photo-front{translate:0 var(--photo-front-y,0px)}
+ .motion-ready .community-photo-back{translate:0 var(--photo-back-y,0px)}
+ .motion-ready .vibe-ribbon-top .vibe-track{transform:translate3d(var(--gallery-top-x,0px),0,0)}
+ .motion-ready .vibe-ribbon-bottom .vibe-track{transform:translate3d(var(--gallery-bottom-x,0px),0,0)}
+ .site-nav.is-open{animation:nav-reveal .18s var(--motion-ease)}
+ dialog[open],dialog.record-popup[open]{animation:dialog-fade .28s var(--motion-ease)}
+ dialog[open]::backdrop{animation:dialog-fade .28s var(--motion-ease)}
+ dialog[open] .record-disc{animation:none}
+ dialog.record-popup[open] #panel-content{animation:content-reveal .4s var(--motion-ease)}
+ [role=tabpanel]:not([hidden]){animation:content-reveal .25s var(--motion-ease)}
+ @keyframes dialog-fade{from{opacity:0}to{opacity:1}}
+ @keyframes content-reveal{from{opacity:.3;translate:0 10px}to{opacity:1;translate:0 0}}
+ @keyframes nav-reveal{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .hero .copy,.hero .collage,.hero .rave,.hero .coffee,.hero .hero-notes{translate:none!important;scale:none!important}
+ .vibe-track{transform:none!important}
+ .community-photo{translate:none!important}
+ .drawn-line image{mask:none}
+}

@@ -1,0 +1,134 @@
+{
+  "revision": 9,
+  "products": [
+    {
+      "id": "cap-white",
+      "title": "MORNCOFFEE Cap",
+      "description": "MORNCOFFEE — limited edition",
+      "price": "£22",
+      "image": "assets/cap-white.webp",
+      "sizes": "",
+      "colors": "",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "tote",
+      "title": "MORNCOFFEE Tote Bag",
+      "description": "MORNCOFFEE — limited edition",
+      "price": "£18",
+      "image": "assets/tote.webp",
+      "sizes": "",
+      "colors": "",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "cap-blue",
+      "title": "MORNCOFFEE Essential Tee",
+      "description": "MORNCOFFEE — limited edition",
+      "price": "£28",
+      "image": "assets/cap-blue.webp",
+      "sizes": "S, M, L",
+      "colors": "#f9f9f9, #4248ff, #ff6f3f",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "tee",
+      "title": "MORNCOFFEE Essential Tee",
+      "description": "MORNCOFFEE — limited edition",
+      "price": "£2.80",
+      "image": "assets/tee.webp",
+      "sizes": "",
+      "colors": "",
+      "url": "",
+      "visible": true
+    }
+  ],
+  "menu": [
+    {
+      "id": "espresso",
+      "title": "Espresso",
+      "description": "Classic. Pure taste of the bean.",
+      "price": "£2.80",
+      "image": "assets/paper-espresso.webp",
+      "category": "coffee",
+      "visible": true
+    },
+    {
+      "id": "flat-white",
+      "title": "Flat White",
+      "description": "Velvety microfoam on double espresso.",
+      "price": "£3.50",
+      "image": "assets/paper-flat-white.webp",
+      "category": "coffee",
+      "visible": true
+    },
+    {
+      "id": "cappuccino",
+      "title": "Cappuccino",
+      "description": "Balance of coffee and milk.",
+      "price": "£3.80",
+      "image": "assets/paper-cappuccino.webp",
+      "category": "coffee",
+      "visible": true
+    },
+    {
+      "id": "filter-coffee",
+      "title": "Filter Coffee",
+      "description": "Brew of the day (V60 / Chemex / Aeropress)",
+      "price": "£3.20",
+      "image": "assets/paper-filter.webp",
+      "category": "coffee",
+      "visible": true
+    }
+  ],
+  "events": [
+    {
+      "id": "sunday",
+      "title": "Sunday Session: Local Vibes",
+      "image": "assets/event-sunday.webp",
+      "date": "November 12",
+      "weekday": "Sunday",
+      "time": "2:00 PM – 8:00 PM",
+      "place": "MORNCOFFEE Space",
+      "dj": "SARAH KLEIN (London)",
+      "price": "Free",
+      "registration": "Open registration",
+      "description": "",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "shoreditch",
+      "title": "Shoreditch Sessions",
+      "image": "assets/event-shoreditch.webp",
+      "date": "November 19",
+      "weekday": "Saturday",
+      "time": "3:00 PM – 10:00 PM",
+      "place": "Boxpark Shoreditch (outdoor)",
+      "dj": "ALEX METRIC + LIAM K",
+      "price": "Early Bird: £12 // Regular: £18",
+      "registration": "Open registration",
+      "description": "",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "solomun",
+      "title": "MORNCOFFEE Presents: Solomun",
+      "image": "assets/event-solomun.webp",
+      "date": "November 26",
+      "weekday": "Saturday",
+      "time": "4:00 PM – 10:00 PM",
+      "place": "MORNCOFFEE Space",
+      "dj": "SOLOMUN (Hamburg)",
+      "price": "Regular: £35 // VIP: £60",
+      "registration": "Open registration",
+      "description": "",
+      "url": "",
+      "visible": true
+    }
+  ]
+}

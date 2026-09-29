@@ -3,3 +3,4 @@ _site/
 __pycache__/
 .env
 .env.*
+.admin-backups/

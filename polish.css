@@ -1,0 +1,81 @@
+.slider-controls,.vibe-motion{display:none!important}
+.vibe-ribbon-top .vibe-set{width:108cqw}
+.vibe-ribbon-top img[src$="vibe-top-left.webp"]{object-fit:cover}
+.vibe-h{letter-spacing:0}
+.vibe .vibe-caption{left:50%;top:50%;max-width:none;font-size:.048em;letter-spacing:-.02em}
+.ticket,.about-card{mask-size:100% 100%;mask-repeat:no-repeat;mask-position:center;border-radius:0}
+.ticket::before,.ticket::after,.about-card::before,.about-card::after{display:none!important}
+.product-record .note-left,.product-record .note-bottom-right{width:max-content;max-width:220px;white-space:nowrap}
+.record-options button[aria-pressed=true]::after{border:0;width:11px;height:11px;background:white;clip-path:polygon(0 45%,14% 31%,40% 57%,85% 12%,100% 27%,40% 87%);transform:translate(0,-50%);right:-8px}
+.record-colors button[aria-pressed=true]::before{background:var(--blue)}
+.record-colors button[aria-pressed=true]::after{right:auto;left:50%;transform:translate(-50%,-50%)}
+.menu-note .instagram-link{color:inherit;white-space:nowrap}
+.menu-note .instagram-name{text-decoration:underline;text-underline-offset:.15em;position:static}
+.menu-note .instagram-arrow{position:static;display:inline-block;margin-left:.5em}
+.menu-note .instagram-link:hover,.menu-note .instagram-link:focus-visible{color:var(--blue)}
+#newsletter button:hover,#newsletter button:focus-visible{background:var(--yellow);color:var(--ink)}
+@keyframes panel-in{from{opacity:0}to{opacity:1}}
+@media(max-width:650px){.vibe-ribbon-top .vibe-set{width:162cqw}.product-record .note-left,.product-record .note-bottom-right{width:max-content!important;max-width:100%!important}}
+.menu-note:has(.instagram-link:hover),.menu-note:has(.instagram-link:focus-visible){color:var(--blue);opacity:1}
+.menu-note{transition:color .2s ease}
+/* Restore the drawing's shallow, separated perforations and original spacing. */
+.menu-tabs{z-index:5;isolation:isolate}
+.menu-tabs button{position:relative;pointer-events:auto;touch-action:manipulation}
+.menu-section>.art-layer,.menu-section>.decal{pointer-events:none}
+.ticket h3{min-height:0}
+.record-thumbnails{position:absolute;left:65%;top:27%;display:flex;flex-direction:column;z-index:2;pointer-events:none}
+.record-thumbnails img{width:42px;height:42px;object-fit:cover;border-radius:50%}
+.record-thumbnails img:nth-child(2){margin-left:23px;margin-top:-8px}
+.record-thumbnails img:nth-child(3){margin-left:42px;margin-top:-8px}
+.product-record .note-left{max-width:180px}
+.product-record .note-bottom-left{width:146px}
+.social-label img{transform:rotate(-4deg)}
+@media(max-width:650px){.record-thumbnails{display:none}.product-record .note-left{max-width:100%}}
+.record-disc{background:url('assets/record-grooves.svg') left top/97.7337% 97.7337% no-repeat,url('assets/record-base.svg') center/100% 100% no-repeat;box-shadow:none}
+.vibe .vibe-caption{top:52.5%;left:50%;text-align:center}
+.record-thumbnails{left:calc(50% + 104px);top:225px;pointer-events:auto;gap:0}
+.record-thumbnails .product-photo-choice{position:relative;flex:none;width:36px;height:36px;border:0;padding:0;border-radius:50%;background:transparent;cursor:pointer}
+.photo-choice-crop{display:block;overflow:hidden;border-radius:50%;width:100%;height:100%}
+.record-thumbnails .photo-choice-crop img{display:block;width:100%;height:100%;margin:0;object-fit:cover}
+.record-thumbnails button:nth-child(2){margin-left:23px;margin-top:-9px}
+.record-thumbnails button:nth-child(3){margin-left:39px;margin-top:-4px}
+.record-options button[aria-pressed=true]::before{display:none}
+.record-options button[aria-pressed=true]::after,.record-thumbnails button[aria-pressed=true]::after{content:"";position:absolute;width:16px;height:16px;right:-11px;top:50%;left:auto;transform:translateY(-50%);clip-path:none;border:0;border-radius:50%;background:white url('assets/selection-check.svg') center/100% 100% no-repeat;pointer-events:none}
+.record-colors button[aria-pressed=true]::after{left:50%;right:auto;transform:translate(-50%,-50%)}
+.record-thumbnails button:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
+@media(min-width:651px) and (max-width:900px){.record-thumbnails{left:calc(50% + 104px);top:172px}}
+@media(max-width:650px){.record-thumbnails{position:relative;display:flex;flex-direction:row;left:auto;top:auto;order:1;gap:16px}.record-thumbnails button:nth-child(n){margin:0}}
+/* Let the sticker cross the section seam while keeping the photos clipped. */
+.vibe{z-index:3;overflow-x:clip;overflow-y:visible}
+.vibe-ribbon-bottom .vibe-set img:not([src$="better-together.svg"]){clip-path:inset(0 0 var(--photo-bottom-cut,0px) 0)}
+.vibe-ribbon-bottom img[src$="better-together.svg"]{z-index:3}
+.menu-card h3,.menu-card p{line-height:1!important}
+.vibe-ribbon-bottom .vibe-track{animation-direction:normal}
+.vibe-photo-layer{position:absolute;inset:0 0 auto;height:var(--photo-layer-height);overflow:hidden}
+.vibe-ribbon-bottom .vibe-photo-layer img{clip-path:none!important}
+.vibe-photo-layer .tilt-middle,.vibe-photo-layer .tilt-edge{object-fit:cover}
+@media(min-width:651px){
+ .record-thumbnails{position:absolute;inset:0;display:block;pointer-events:none}
+ .record-thumbnails .product-photo-choice:nth-child(n){position:absolute;pointer-events:auto;margin:0}
+ .record-thumbnails .product-photo-choice:nth-child(1){left:calc(50% + 100.44px);top:calc(50% - 149.54px)}
+ .record-thumbnails .product-photo-choice:nth-child(2){left:calc(50% + 126.99px);top:calc(50% - 119.52px)}
+ .record-thumbnails .product-photo-choice:nth-child(3){left:calc(50% + 146.11px);top:calc(50% - 84.3px)}
+ .record-scene{margin: max(7px,calc((100svh - 706px)/2)) auto}
+}
+@media(min-width:651px) and (max-width:900px){.record-scene{margin:max(7px,calc((100svh - 600px)/2)) auto}}
+dialog.record-popup{overflow-x:hidden;overflow-y:auto}
+.record-product-price{position:absolute;left:50%;bottom:132px;transform:translateX(-50%);margin:0!important;padding:3px 12px;border-radius:6px;background:#f2f2f0;color:#151414;font:600 20px/1.4 Oswald,sans-serif;text-align:center;white-space:nowrap}
+@media(min-width:651px) and (max-width:900px){.record-product-price{bottom:115px}}
+@media(max-width:650px){.record-product-price{position:relative;left:auto;bottom:auto;transform:none;order:2;margin-bottom:-4px!important;align-self:center;font-size:20px}}
+@keyframes disc-in{from{opacity:0;scale:.98}to{opacity:1;scale:1}}
+/* Center the price between the photo's bottom edge and the Order button. */
+@media(min-width:901px){.record-product-price{top:calc(75% + 18.5px);bottom:auto;transform:translate(-50%,-50%)}}
+@media(min-width:651px) and (max-width:900px){.record-product-price{top:calc(75% + 27px);bottom:auto;transform:translate(-50%,-50%)}}
+@media(max-width:650px){.record-product-price{margin-block:0!important}}
+
+.menu-section:has(#tab-coffee[aria-selected="false"]) .coffee-only-decal{display:none}
+
+/* Balanced, stable variations for the product's floating paper notes. */
+@media(min-width:651px){
+ .product-record .arranged-note{left:var(--note-x);top:var(--note-y);right:auto;bottom:auto;width:var(--note-width);max-width:none;white-space:normal;transform:rotate(var(--note-tilt))}
+}

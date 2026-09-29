@@ -1,0 +1,34 @@
+/* Catalog rails preserve card rotations and use controls instead of scrollbars. */
+.menu-grid{display:flex;overflow-x:auto;overflow-y:hidden;gap:2cqw;padding:3.5cqw 1cqw 4cqw;top:16.5cqw;scroll-snap-type:x mandatory;scrollbar-width:none}
+.menu-grid::-webkit-scrollbar,.event-cards::-webkit-scrollbar{display:none}
+.menu-grid .menu-card{flex:0 0 calc((100% - 6cqw)/4);scroll-snap-align:start}
+.menu-card:nth-child(4n+1){transform:translateY(3.03cqw) rotate(-3.03deg)}
+.menu-card:nth-child(4n+2){transform:rotate(-.06deg)}
+.menu-card:nth-child(4n+3){transform:translateY(2.75cqw) rotate(2.01deg)}
+.menu-card:nth-child(4n+4){transform:translateY(1.51cqw) rotate(-2.14deg)}
+.menu-card h3,.product h3,.ticket h3{overflow-wrap:anywhere}
+.catalog-empty{font-size:16px;min-height:180px;display:grid;place-items:center;width:100%}
+.events.catalog-slider{height:auto;max-height:none;min-height:0;padding:16cqw 0 10cqw}
+.catalog-slider .event-cards{position:relative;display:flex;flex-direction:row;align-items:flex-start;gap:4cqw;overflow-x:auto;overflow-y:hidden;padding:2cqw 3.5cqw 4cqw;scroll-snap-type:x mandatory;scrollbar-width:none}
+.catalog-slider .event-card{position:relative;left:auto;top:auto;flex:0 0 28.333cqw;width:28.333cqw;scroll-snap-align:start}
+.ticket h3{line-height:1.15;min-height:2.3em}
+.event-details dd{white-space:normal;text-align:right;max-width:76%;overflow-wrap:anywhere}
+.slider-controls{display:flex;gap:8px;position:absolute;right:3.5cqw;z-index:4}
+.slider-controls button{border:1px solid currentColor;border-radius:50%;width:38px;height:38px;background:transparent;color:inherit;font-size:22px;cursor:pointer}
+.slider-controls button:hover{background:var(--orange);color:white}
+.slider-controls button:disabled{opacity:.3;cursor:default}
+.events>.slider-controls{bottom:3cqw}.menu-section>.slider-controls{top:16cqw}
+.merch.catalog-cascade{max-height:none;padding-bottom:0}
+.catalog-cascade .merch-grid{position:static;display:block;margin:0;max-width:none}
+.catalog-cascade .product{top:var(--card-top)!important}
+.catalog-cascade .merch-figure-left,.catalog-cascade .merch-figure-right{top:auto!important;bottom:0}
+@media(max-width:800px){
+ .menu-grid{top:auto;gap:20px;padding:20px 20px 35px}
+ .menu-grid .menu-card{flex:0 0 255px}
+ .events.catalog-slider{padding:60px 0 90px}
+ .catalog-slider .event-cards{gap:40px;padding:12px 22px 32px 16px}
+ .catalog-slider .event-card{flex:0 0 290px;width:290px}
+ .events>.slider-controls{bottom:25px}.menu-section>.slider-controls{top:155px;right:15px}
+ .slider-controls button{width:32px;height:32px;font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){.menu-grid,.event-cards{scroll-behavior:auto}}

@@ -1,0 +1,28 @@
+/* Original Figma artwork, version 2. SVG exports already include rotation. */
+main{overflow-x:clip}
+.brand>img{width:1.33333cqw;height:1.83333cqw}
+.flower{object-fit:contain}
+.sticker{object-fit:contain}
+.hero-notes{position:absolute;left:10.58333cqw;bottom:32cqw;width:32.83cqw;height:11.638cqw;object-fit:contain;pointer-events:none}
+.mascot>img{width:100%;height:100%;object-fit:contain}
+.mascot-limb{object-fit:contain;pointer-events:none;z-index:-1}
+.original-decal{background:transparent!important;outline:0!important;padding:0!important;transform:none}
+.original-decal>img{display:block;width:100%;height:100%;object-fit:contain}
+.footer-wordmark>img{display:block;width:100%;height:auto}
+@media(min-width:801px){
+ .community .section-title{left:34.66667cqw}
+ .footer-wordmark{top:34.24089cqw;width:93.08333cqw;font-size:0}
+ .about-card h3{color:var(--ink)}
+}
+@media(min-width:651px){
+ .flower{left:33.08333cqw;top:calc(max(0px,(100% - 50cqw)/2 - 2cqw) + 25.58333cqw);width:18.6416cqw;height:12.98055cqw}
+ .coffee{left:12.5cqw}
+}
+@media(max-width:800px){
+ .mascot-limb{display:none}
+}
+@media(max-width:650px){
+ .brand>img{width:16px;height:22px}
+ .hero-notes{left:21.525cqw;bottom:min(57cqw,calc(100% - 31.67cqw));width:66.77cqw;height:23.67cqw}
+ .flower{width:36.5cqw;height:25.42cqw;left:68.5cqw;top:24cqw}
+}

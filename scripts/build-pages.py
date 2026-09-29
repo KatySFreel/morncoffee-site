@@ -1,5 +1,6 @@
 """Build the main site and a separate URL for each version-N branch."""
 import re
+import json
 import subprocess
 from pathlib import Path, PurePosixPath
 
@@ -11,10 +12,14 @@ def git(*args):
 
 def export(ref, destination):
     files = git('ls-tree', '-rz', '--name-only', ref).decode().split('\0')
+    referenced_images = set()
+    if 'data/content.json' in files:
+        catalog = json.loads(git('show', f'{ref}:data/content.json'))
+        referenced_images = {row['image'] for group in ('products', 'menu', 'events') for row in catalog[group]}
     for name in filter(None, files):
         path = PurePosixPath(name)
         allowed = (len(path.parts) == 1 and path.suffix in {'.html', '.css', '.js'}) or (
-            path.parts[0] == 'assets' and path.suffix in {'.webp', '.svg', '.ttf', '.woff', '.woff2'})
+            path.parts[0] == 'assets' and (path.suffix in {'.webp', '.svg', '.ttf', '.woff', '.woff2'} or ('uploads' in path.parts and path.suffix in {'.png', '.jpg', '.jpeg', '.gif'}))) or name == 'data/content.json' or name in referenced_images
         if allowed:
             target = destination / name
             target.parent.mkdir(parents=True, exist_ok=True)

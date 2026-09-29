@@ -1,0 +1,26 @@
+/* Artwork and proportions from the updated Paper artboard 1CV-0. */
+.menu-photo.flat-white,.menu-photo.cappuccino,.menu-photo.filter{
+ background-size:cover;background-position:center;
+}
+.footer-wordmark picture,.footer-wordmark picture img{display:block;width:100%;height:auto}
+@media(min-width:801px){
+ .menu-card{gap:.83333cqw}
+ .menu-card:last-child{gap:1.33333cqw}
+ .menu-card:last-child h3,.menu-card:last-child p{line-height:1}
+ .menu-note{right:2.66667cqw;width:22.75cqw}
+ .about h2 span:nth-child(n+2){letter-spacing:-.03em}
+ .about-card{border-radius:0;isolation:isolate}
+ .about-card h3{color:#666}
+ .about-card p{line-height:1.2}
+ .about-drink p{line-height:1}
+ .about-card::before,.about-card::after{
+  content:"";position:absolute;left:0;right:0;height:1.41667cqw;z-index:-1;
+  background:radial-gradient(circle at .86667cqw 0,transparent .65417cqw,#fefefe calc(.65417cqw + .5px)) 0 0/1.71533cqw 100% repeat-x;
+ }
+ .about-card::before{top:-.75cqw}
+ .about-card::after{bottom:-1.41667cqw;transform:rotate(180deg)}
+ .footer-wordmark{top:28.75cqw;width:93.08333cqw;height:23.41667cqw}
+ .footer-wordmark picture,.footer-wordmark picture img{height:100%;object-fit:cover;object-position:center}
+ .footer-character{display:none}
+ .footer-legal{bottom:2.16667cqw}
+}

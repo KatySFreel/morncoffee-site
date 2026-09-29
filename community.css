@@ -1,0 +1,20 @@
+/* Paper 1WS-0 / Figma Frame 2522, 1200 × 459. */
+.community-person{position:absolute;left:75.91667cqw;top:13.83333cqw;width:24.08333cqw;height:24.41667cqw;object-fit:contain;pointer-events:none}
+@media(min-width:801px){
+ .community{height:38.25cqw;max-height:none;z-index:2}
+ .community .section-title{left:34.66667cqw;top:3.33333cqw}
+ .community-copy{font-weight:500;line-height:1.42857}
+ .signup{top:26.83333cqw;z-index:4}
+ .signup>p{font-weight:500;line-height:1.42857;max-width:22cqw;min-height:3.33333cqw;margin-bottom:1.66667cqw}
+ #newsletter input{width:29.80625cqw;padding-right:5cqw}
+ #newsletter button{width:12.43617cqw}
+ .community-photo{border-radius:0;transform:none;object-fit:contain;pointer-events:none}
+ .community-photo-front{z-index:2}
+ .community-photo-back{z-index:1}
+ .community>.decal{left:27.91667cqw;top:13.5cqw;width:9.58175cqw;height:7.07367cqw;z-index:3}
+}
+@media(max-width:800px){
+ .community-person{display:none}
+ .community-photo-front{left:-25px;top:auto;bottom:30px;z-index:2;transform:none;object-fit:contain}
+ .community-photo-back{left:150px;top:auto;bottom:-30px;z-index:1;transform:none;object-fit:contain}
+}
