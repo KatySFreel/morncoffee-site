@@ -274,3 +274,7 @@
  .record-popup .record-product-gallery .record-colors button:nth-child(2){left:calc(6% + 14px);top:calc(56% + 40px)}
  .record-popup .record-product-gallery .record-colors button:nth-child(3){left:calc(6% + 38px);top:calc(56% + 75px)}
 }
+
+/* Header lockup matches Figma 636:12506 at its native size. */
+.site-brand{font-size:12px;line-height:1.4;font-weight:700;gap:2px;color:#331308}
+.site-brand>img{width:16px;height:22px;flex:none}
