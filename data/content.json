@@ -6,20 +6,9 @@
       "title": "MORNCOFFEE Cap",
       "description": "MORNCOFFEE — limited edition",
       "price": "£22",
-      "image": "assets/cap-white.webp",
+      "image": "assets/menu-cappuccino.jpg",
       "sizes": "",
-      "colors": "",
-      "url": "",
-      "visible": true
-    },
-    {
-      "id": "tote",
-      "title": "MORNCOFFEE Tote Bag",
-      "description": "MORNCOFFEE — limited edition",
-      "price": "£18",
-      "image": "assets/tote.webp",
-      "sizes": "",
-      "colors": "",
+      "colors": "#f9f9f9, #ffdf42, #4248ff, #ff6f3f",
       "url": "",
       "visible": true
     },
@@ -28,9 +17,20 @@
       "title": "MORNCOFFEE Essential Tee",
       "description": "MORNCOFFEE — limited edition",
       "price": "£28",
-      "image": "assets/cap-blue.webp",
+      "image": "assets/shirt-white-front.jpg",
       "sizes": "S, M, L",
-      "colors": "#f9f9f9, #4248ff, #ff6f3f",
+      "colors": "#f9f9f9, #ffdf42, #4248ff, #ff6f3f",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "tote",
+      "title": "MORNCOFFEE Tote Bag",
+      "description": "MORNCOFFEE — limited edition",
+      "price": "£18",
+      "image": "assets/merch-keyrings.jpg",
+      "sizes": "",
+      "colors": "",
       "url": "",
       "visible": true
     },
@@ -50,27 +50,27 @@
     {
       "id": "espresso",
       "title": "Espresso",
-      "description": "Classic. Pure taste of the bean.",
+      "description": "Classic. Pure taste of the bean",
       "price": "£2.80",
-      "image": "assets/paper-espresso.webp",
+      "image": "assets/menu-espresso.jpg",
       "category": "coffee",
       "visible": true
     },
     {
       "id": "flat-white",
       "title": "Flat White",
-      "description": "Velvety microfoam on double espresso.",
+      "description": "Velvety microfoam on double espresso",
       "price": "£3.50",
-      "image": "assets/paper-flat-white.webp",
+      "image": "assets/menu-flat-white.jpg",
       "category": "coffee",
       "visible": true
     },
     {
       "id": "cappuccino",
       "title": "Cappuccino",
-      "description": "Balance of coffee and milk.",
+      "description": "Balance of coffee and milk",
       "price": "£3.80",
-      "image": "assets/paper-cappuccino.webp",
+      "image": "assets/menu-cappuccino.jpg",
       "category": "coffee",
       "visible": true
     },
@@ -79,7 +79,7 @@
       "title": "Filter Coffee",
       "description": "Brew of the day (V60 / Chemex / Aeropress)",
       "price": "£3.20",
-      "image": "assets/paper-filter.webp",
+      "image": "assets/menu-filter.jpg",
       "category": "coffee",
       "visible": true
     }

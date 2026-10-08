@@ -11,14 +11,14 @@
 .site-brand>img{width:clamp(16px,1.33333vw,21.333px);height:clamp(22px,1.83333vw,29.333px)}
 .site-nav[data-at-footer],.site-brand[data-at-footer]{opacity:0;visibility:hidden;pointer-events:none}
 .footer-credit{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
-@media(max-width:800px){
+@media(max-width:650px){
  .site-nav{top:20px;right:4vw;gap:clamp(8px,3vw,20px);padding:2px 8px}
  .site-nav a{font-size:10px}
  .site-brand{top:20px;left:4vw;font-size:10px}
  .site-brand>img{width:12px;height:17px}
  .footer-credit{position:static;transform:none;white-space:normal;display:block}
 }
-@media(min-width:801px){
+@media(min-width:651px){
  .footer h2{font-size:1.16667cqw;font-weight:500;letter-spacing:-.02em;margin-bottom:1.33333cqw}
  .footer p,.footer address{font-size:1cqw;line-height:1.41667;opacity:.8}
  .footer address{gap:1.33333cqw}
@@ -31,7 +31,7 @@
  .social-buttons .facebook-icon{width:.75cqw;height:1.33333cqw}
  .footer-legal{bottom:2.5cqw}
 }
-@media(max-width:800px){
+@media(max-width:650px){
  .footer address{gap:8px}
  .social-label{height:34px}
 }

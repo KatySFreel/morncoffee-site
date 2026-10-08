@@ -26,7 +26,7 @@ window.contentReady = (async () => {
     for(const category of ['coffee','drinks','food']){
       const panel=document.querySelector(`#menu-${category}`),items=visible(data.menu).filter(item=>item.category===category);
       panel.className='menu-grid';panel.replaceChildren();
-      items.forEach(item=>{const card=menuTemplate.cloneNode(true);text(card,'h3',item.title);text(card,'p',item.description);text(card,'.price',item.price);const photo=card.querySelector('.menu-photo');photo.className='menu-photo';photo.setAttribute('aria-label',item.title);background(photo,item.image);panel.append(card);});
+      items.forEach(item=>{const card=menuTemplate.cloneNode(true);text(card,'h3',item.title);text(card,'p',item.description);text(card,'.price',item.price);const photo=card.querySelector('.menu-photo');photo.className='menu-photo';photo.setAttribute('aria-label',item.title);background(photo,item.image);const info=document.createElement('div');info.className='menu-card-info';const copy=document.createElement('div');copy.className='menu-card-copy';copy.append(card.querySelector('h3'),card.querySelector('p'));info.append(copy,card.querySelector('.price'));card.append(info);panel.append(card);});
       if(!items.length){const message=document.createElement('p');message.className='catalog-empty';message.textContent='New items coming soon.';panel.append(message);}
     }
     const products=visible(data.products),productList=document.querySelector('.merch-grid'),productTemplate=productList.firstElementChild.cloneNode(true);
@@ -49,8 +49,9 @@ window.contentReady = (async () => {
 function setupCatalogLayout(){
   const merch=document.querySelector('.merch');
   function arrangeMerch(){
-    const cards=[...merch.querySelectorAll('.product')],mobile=matchMedia('(max-width:800px)').matches,u=merch.clientWidth/100;
-    const starts=mobile?[180.717,292.149,405.776,512.76]:[46.18417,62.83333,43.38833,63.3825];
+    const cards=[...merch.querySelectorAll('.product')];
+    const mobile=matchMedia('(max-width:650px)').matches,u=merch.clientWidth/100;
+    const starts=mobile?[180.717,292.149,405.776,512.76]:[46.184,62.83333,46.20756,62.79712];
     let groupBase=0,maxBottom=0;
     cards.forEach((card,index)=>{
       if(index&&index%4===0)groupBase=maxBottom/u+8-Math.min(...starts);

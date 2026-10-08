@@ -1,0 +1,70 @@
+/* Updated Figma catalog cards: compact copy, separate price column. */
+.menu-section{background:#ffdf42}
+.menu-card-info{display:flex;align-items:flex-start;gap:.83333cqw;flex:none;width:100%;color:#331308}
+.menu-card-copy{display:flex;flex-direction:column;gap:.66667cqw;flex:1;min-width:0}
+.menu-card-info .price{flex:none;white-space:nowrap}
+.menu-card .menu-card-copy h3{line-height:1!important}
+.menu-card .menu-card-copy p{line-height:1.4!important}
+.menu-grid .menu-card{height:30cqw}
+.product h3{margin:1.33333cqw 0 .66667cqw;line-height:1}
+.product.cap-white .product-photo{background-size:cover;background-position:center}
+.product .swatches{gap:.33333cqw}
+.product .swatch{width:1.66667cqw;height:1.66667cqw}
+@media(min-width:651px){
+ .product-record .record-colors{inset:0;width:100%;height:100%;display:block;pointer-events:none}
+ .product-record .record-colors button:nth-child(n){position:absolute;margin:0;pointer-events:auto;transform:translate(-50%,-50%);left:calc(50% + 180px * cos(var(--orbit-angle)));top:calc(50% + 180px * sin(var(--orbit-angle)))}
+ .product-record .record-colors button:nth-child(1){--orbit-angle:175deg}
+ .product-record .record-colors button:nth-child(2){--orbit-angle:161deg}
+ .product-record .record-colors button:nth-child(3){--orbit-angle:147deg}
+ .product-record .record-colors button:nth-child(4){--orbit-angle:133deg}
+}
+@media(max-width:650px){
+ .menu-grid .menu-card{height:360px;padding:10px;gap:10px;flex-basis:265px}
+ .menu-card-info{gap:10px}
+ .menu-card-copy{gap:8px}
+ .menu-card .menu-card-copy h3{font-size:20px}
+ .menu-card .menu-card-copy p{font-size:14px}
+ .menu-card-info .price{font-size:16px}
+ .product h3{margin:16px 0 8px;font-size:20px;line-height:1}
+ .product-meta{font-size:16px;line-height:1}
+ .product .swatches{gap:4px}
+ .product .swatch{width:20px;height:20px}
+}
+/* Keep every mobile choice tangent to the main photo, outside its crop. */
+@media(max-width:650px){
+ .record-popup .record-product-gallery .record-center{width:calc(100% - 88px)}
+ .record-popup .record-product-gallery .record-colors{translate:none}
+ .record-popup .record-product-gallery .product-photo-choice:nth-child(n){width:44px;height:44px;padding:0;border:0}
+ .record-popup .record-product-gallery .record-options:not(.record-colors) button:nth-child(n),
+ .record-popup .record-product-gallery .record-options button:nth-child(n),
+ .record-popup .record-product-gallery .product-photo-choice:nth-child(n){
+  left:calc(50% + (50% - 22px) * cos(var(--orbit-angle)));
+  top:calc(50% + (50% - 22px) * sin(var(--orbit-angle)));
+ }
+ .record-popup .record-product-gallery .record-colors button:nth-child(1){--orbit-angle:175deg}
+ .record-popup .record-product-gallery .record-colors button:nth-child(2){--orbit-angle:156deg}
+ .record-popup .record-product-gallery .record-colors button:nth-child(3){--orbit-angle:137deg}
+ .record-popup .record-product-gallery .record-colors button:nth-child(4){--orbit-angle:118deg}
+ .record-popup .record-product-gallery .record-options:not(.record-colors) button:nth-child(1){--orbit-angle:12deg}
+ .record-popup .record-product-gallery .record-options:not(.record-colors) button:nth-child(2){--orbit-angle:31deg}
+ .record-popup .record-product-gallery .record-options:not(.record-colors) button:nth-child(3){--orbit-angle:50deg}
+ .record-popup .record-product-gallery .product-photo-choice:nth-child(1){--orbit-angle:-52deg}
+ .record-popup .record-product-gallery .product-photo-choice:nth-child(2){--orbit-angle:-32deg}
+ .record-popup .record-product-gallery .product-photo-choice:nth-child(3){--orbit-angle:-12deg}
+}
+
+/* Figma 637:24364: cup and keyrings above, tee and coffee below. */
+.menu-card .menu-card-copy p{opacity:.8}
+@media(min-width:651px){
+ .product.tote{left:28.7792cqw;transform:rotate(4.6376deg)}
+ .product.cap-blue{left:50.83333cqw;transform:rotate(-3.6466deg)}
+ .product.tee{left:72.54907cqw;transform:rotate(-.68388deg)}
+}
+.menu-card:has(.menu-photo.filter) .menu-card-copy p{line-height:1!important}
+@media(min-width:651px){
+ .menu-grid{top:18.25cqw;padding:0 0 4cqw;justify-content:space-between;gap:1.66667cqw}
+ .menu-grid .menu-card{flex:0 0 22.08333cqw}
+}
+
+.record-colors button[aria-label="Blue"][aria-pressed="true"]::after{background-image:url("assets/selection-check-orange.svg")}
+

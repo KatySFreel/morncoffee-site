@@ -341,7 +341,7 @@ document.querySelectorAll('.product').forEach(card => card.addEventListener('cli
 document.querySelectorAll('[data-product]').forEach(button => button.addEventListener('click', () => {
   const card = button.closest('.product');
   const record = window.cmsContent?.products.find(item => item.id === button.dataset.product);
-  const isShirt = !!(record?.sizes || record?.colors);
+  const isShirt = !!record?.sizes;
   const title = record?.title || card.querySelector('h3').textContent;
   const scene = openRecord(title, 'product');
   const center = element('div', 'record-center');
@@ -352,28 +352,70 @@ document.querySelectorAll('[data-product]').forEach(button => button.addEventLis
   scene.append(center, element('h3', 'record-product-title', title));
   if (isShirt) {
     const originalTee=record?.id==='cap-blue';
-    note(scene, 'top', originalTee && (!record.description || record.description==='MORNCOFFEE — limited edition') ? 'Basic organic cotton t-shirt. Minimalist logo on the front, "Feel the beat" print on the back.' : record?.description || 'MORNCOFFEE — limited edition');
+    note(scene, 'top', originalTee && (!record.description || record.description==='MORNCOFFEE — limited edition') ? 'Basic organic cotton t-shirt. Minimalist logo on the front, MORNCOFFEE print on the back.' : record?.description || 'MORNCOFFEE — limited edition');
     if(originalTee) note(scene, 'left', '100% Organic Cotton');
     if(originalTee){
       note(scene, 'top-right', 'Unisex fit');
       const thumbs=element('div','record-thumbnails');
       thumbs.setAttribute('role','group');thumbs.setAttribute('aria-label','Product photos');
-      // The design supplies one photograph. Use detail views until other shots are supplied.
-      const views=[{src:photo.src,label:'Full product',scale:1,position:'50% 50%'},{src:photo.src,label:'Print detail',scale:1.8,position:'50% 40%'},{src:photo.src,label:'Fabric detail',scale:2.4,position:'50% 25%'}];
-      views.forEach((view,index)=>{
-        const button=element('button','product-photo-choice');button.type='button';button.setAttribute('aria-label',view.label);button.setAttribute('aria-pressed',String(index===0));
-        const crop=element('span','photo-choice-crop'),thumb=element('img');thumb.src=view.src;thumb.alt='';thumb.style.transform=`scale(${view.scale})`;thumb.style.transformOrigin=view.position;crop.append(thumb);button.append(crop);
-        button.addEventListener('click',()=>{photo.src=view.src;photo.style.transform=`scale(${view.scale})`;photo.style.transformOrigin=view.position;thumbs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));});thumbs.append(button);
+      let selectedColor = 'white';
+      let selectedView = 0;
+      const views = ['Front', 'Back', 'Print detail'];
+      const updatePhotos = () => {
+        const source = index => `assets/shirt-${selectedColor}-${index === 0 ? 'front' : selectedColor === 'white' && index === 2 ? 'detail' : 'back'}.jpg`;
+        const scale = index => index === 2 ? ({white:1, blue:1.5033, orange:1.453, yellow:1.4123}[selectedColor]) : 1;
+        photo.src = source(selectedView);
+        photo.alt = `${title} — ${selectedColor}, ${views[selectedView].toLowerCase()}`;
+        photo.style.transform = `scale(${scale(selectedView)})`;
+        photo.style.transformOrigin = '50% 25%';
+        thumbs.querySelectorAll('button').forEach((button, index) => {
+          button.setAttribute('aria-pressed', String(index === selectedView));
+          const image = button.querySelector('img');
+          image.src = source(index);
+          image.style.transform = `scale(${scale(index)})`;
+          image.style.transformOrigin = '50% 25%';
+        });
+      };
+      views.forEach((label, index) => {
+        const button = element('button', 'product-photo-choice');
+        button.type = 'button';
+        button.setAttribute('aria-label', label);
+        const crop = element('span', 'photo-choice-crop');
+        const thumb = element('img');
+        thumb.alt = '';
+        crop.append(thumb);button.append(crop);
+        button.addEventListener('click', () => { selectedView = index; updatePhotos(); });
+        thumbs.append(button);
       });
+      updatePhotos();
+      options(scene, 'record-colors', 'Color', [
+        {label:'',name:'White',color:'#f9f9f9',key:'white'},
+        {label:'',name:'Yellow',color:'#ffdf42',key:'yellow'},
+        {label:'',name:'Blue',color:'#4248ff',key:'blue'},
+        {label:'',name:'Orange',color:'#ff6f3f',key:'orange'}
+      ], value => { selectedColor = value.key; updatePhotos(); });
       const gallery = element('div', 'record-product-gallery');
       center.before(gallery);
       gallery.append(center, thumbs);
     }
     if (record.sizes) options(scene, '', 'Size', record.sizes.split(',').map(label => ({label:label.trim()})));
-    options(scene, 'record-colors', 'Color', (record.colors || '').split(',').filter(Boolean).map(color => ({label:'',name:color.trim(),color:color.trim()})));
+    if (!originalTee) options(scene, 'record-colors', 'Color', (record.colors || '').split(',').filter(Boolean).map(color => ({label:'',name:color.trim(),color:color.trim()})));
   } else {
     note(scene, 'top', record?.description || 'MORNCOFFEE — limited edition');
     note(scene, 'bottom-right', 'Available at MORNCOFFEE');
+    if (record?.id === 'cap-white') options(scene, 'record-colors', 'Color', [
+      {label:'',name:'White',color:'#f9f9f9',image:'filter'},
+      {label:'',name:'Yellow',color:'#ffdf42',image:'espresso'},
+      {label:'',name:'Blue',color:'#4248ff',image:'cappuccino'},
+      {label:'',name:'Orange',color:'#ff6f3f',image:'flat-white'}
+    ], value => { photo.src=`assets/menu-${value.image}.jpg`; photo.alt=`${title} — ${value.name.toLowerCase()}`; });
+    if (record?.id === 'cap-white') scene.querySelectorAll('.record-colors button').forEach((button,index)=>button.setAttribute('aria-pressed',String(index===2)));
+
+  }
+  if (record?.id === 'cap-white') {
+    const gallery = element('div', 'record-product-gallery');
+    center.before(gallery);
+    gallery.append(center);
   }
   const priceTag=element('p','record-product-price',record?.price || card.querySelector('.product-meta>span').textContent.trim());
   scene.append(priceTag);

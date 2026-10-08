@@ -27,7 +27,7 @@
 .merch-figure-left,.merch-figure-right{object-fit:contain}
 .event-mini-dj{position:absolute;left:81.95833cqw;top:23.875cqw;width:4.08333cqw;height:4.33333cqw;z-index:2;pointer-events:none;object-fit:contain}
 @keyframes vibe-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:800px){
+@media(max-width:650px){
  .event-mini-dj{display:none}
  .ticket{--cut-radius:10px;--cut-step:26px;--cut-x:13px}
  .barcode{height:89px;margin:30px 0 10px}

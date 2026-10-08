@@ -13,6 +13,9 @@
   let geometry;
   let motionScroll = null;
   let lastPaint = 0;
+  let galleryPhase = 0;
+  let galleryBoost = 0;
+  let previousScroll = scrollY;
   const clamp = value => Math.max(0, Math.min(1, value));
   const ease = 'cubic-bezier(.22,.61,.36,1)';
 
@@ -30,6 +33,8 @@
     geometry = {heroTop:h.top + scrollY, heroHeight:h.height,
       communityTop:c.top + scrollY, communityHeight:c.height,
       galleryTop:g.top + scrollY, galleryHeight:g.height, viewport:innerHeight,
+      topLoop:gallery.querySelector('.vibe-ribbon-top .vibe-set').getBoundingClientRect().width,
+      bottomLoop:gallery.querySelector('.vibe-ribbon-bottom .vibe-set').getBoundingClientRect().width,
       width:Math.min(innerWidth,1600), mobile:innerWidth <= 650};
     schedule();
   }
@@ -47,15 +52,22 @@
     hero.style.setProperty('--hero-photo-y', `${progress * (mobile ? 42 : 85)}px`);
     hero.style.setProperty('--hero-photo-scale', String(1 + progress * .025));
     hero.style.setProperty('--hero-copy-y', `${clamp((scrollY - heroTop) / heroHeight) * (mobile ? -12 : -34)}px`);
-    // Both ribbons move only while the user scrolls, with no autonomous loop.
-    const galleryProgress = clamp((motionScroll + viewport - galleryTop) / (viewport + galleryHeight));
-    gallery.style.setProperty('--gallery-top-x', `${-galleryProgress * width * .38}px`);
-    gallery.style.setProperty('--gallery-bottom-x', `${-galleryProgress * width * .22}px`);
+    // Keep a seamless automatic loop; scrolling adds speed in the same direction.
+    const galleryVisible = scrollY + viewport > galleryTop && scrollY < galleryTop + galleryHeight;
+    const galleryPlaying = galleryVisible && !gallery.hasAttribute('data-paused');
+    if (galleryPlaying) {
+      galleryBoost = Math.min(900, galleryBoost + Math.abs(scrollY - previousScroll) * 3);
+      galleryPhase += elapsed / 1000 * (1 + galleryBoost / 45);
+      galleryBoost *= Math.exp(-elapsed / 220);
+      gallery.style.setProperty('--gallery-top-x', `${-(galleryPhase / 65 % 1) * geometry.topLoop}px`);
+      gallery.style.setProperty('--gallery-bottom-x', `${-(galleryPhase / 80 % 1) * geometry.bottomLoop}px`);
+    } else galleryBoost = 0;
+    previousScroll = scrollY;
     const communityProgress = clamp((motionScroll + viewport - communityTop) / (viewport + communityHeight));
     const drift = (communityProgress - .5) * (mobile ? 16 : 36);
     community.style.setProperty('--photo-front-y', `${-drift}px`);
     community.style.setProperty('--photo-back-y', `${drift * .65}px`);
-    if (motionScroll !== scrollY) schedule();
+    if (motionScroll !== scrollY || galleryPlaying) schedule();
   }
   function schedule() {
     if (enabled && !frame) frame = requestAnimationFrame(paint);
@@ -140,11 +152,14 @@
     cancelAnimationFrame(frame); frame = 0;
     motionScroll = null;
     lastPaint = 0;
+    previousScroll = scrollY;
+    galleryBoost = 0;
     if (enabled) { measure(); observe(); }
   }
   configure();
   reduce.addEventListener('change',configure);
   window.addEventListener('scroll',schedule,{passive:true});
+  gallery.querySelector('.vibe-motion')?.addEventListener('click', schedule);
   window.addEventListener('resize',measure,{passive:true});
   document.addEventListener('visibilitychange',schedule);
   let heroVisible = true;

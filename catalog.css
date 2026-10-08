@@ -22,7 +22,7 @@
 .catalog-cascade .merch-grid{position:static;display:block;margin:0;max-width:none}
 .catalog-cascade .product{top:var(--card-top)!important}
 .catalog-cascade .merch-figure-left,.catalog-cascade .merch-figure-right{top:auto!important;bottom:0}
-@media(max-width:800px){
+@media(max-width:650px){
  .menu-grid{top:auto;gap:20px;padding:20px 20px 35px}
  .menu-grid .menu-card{flex:0 0 255px}
  .events.catalog-slider{padding:60px 0 90px}
