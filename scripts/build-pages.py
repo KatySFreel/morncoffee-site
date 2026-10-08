@@ -19,7 +19,7 @@ def export(ref, destination):
     for name in filter(None, files):
         path = PurePosixPath(name)
         allowed = (len(path.parts) == 1 and path.suffix in {'.html', '.css', '.js'}) or (
-            path.parts[0] == 'assets' and (path.suffix in {'.webp', '.svg', '.ttf', '.woff', '.woff2'} or ('uploads' in path.parts and path.suffix in {'.png', '.jpg', '.jpeg', '.gif'}))) or name == 'data/content.json' or name in referenced_images
+            path.parts[0] == 'assets' and path.suffix in {'.webp', '.svg', '.ttf', '.woff', '.woff2', '.png', '.jpg', '.jpeg', '.gif'}) or name == 'data/content.json' or name in referenced_images
         if allowed:
             target = destination / name
             target.parent.mkdir(parents=True, exist_ok=True)
